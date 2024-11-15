@@ -1,0 +1,24 @@
+type TableComponent implements FolderComponent {
+    id: ID!
+    title: String!
+    rows: [String!]!
+    columns: [String!]!
+    cells: [TableCell!]
+}
+
+type TableCell {
+    row: Int!
+    column: Int!
+    response: String
+}
+
+input TableComponentInput {
+    id: ID!
+    cells: [TableCellInput!]!
+}
+
+input TableCellInput {
+    row: Int!
+    column: Int!
+    response: String
+}

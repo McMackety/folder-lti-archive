@@ -1,0 +1,6 @@
+type Submission {
+    fid: ID! #Folder ID
+    id: ID! #Unique to user. Same as fid if on admin view
+    pages: [Page!]
+    name: String!
+}

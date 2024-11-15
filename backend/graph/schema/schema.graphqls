@@ -1,0 +1,15 @@
+type Query {
+    myAssignment(externalLtiID: String!): Assignment
+    assignment(id: ID!): Assignment
+    submission(id: ID!): Submission
+    folders: [Folder!]
+    currentFolderID(externalLtiID: String!): ID
+    me: User
+}
+
+type Mutation {
+    saveAssignment(externalLtiID: String!, data: SaveAssignmentInput!): Assignment
+    pickFolderForAssignment(externalLtiID: String!, folderID: ID!): ID
+    submitAssignment(externalLtiID: String!): String!
+    uploadImage(base64data: String!, filename: String!): String!
+}

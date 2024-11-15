@@ -1,0 +1,5 @@
+type Folder {
+    fid: ID! #Folder ID
+    name: String!
+    pages: [Page!]
+}

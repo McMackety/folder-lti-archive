@@ -1,0 +1,23 @@
+type Assignment {
+    fid: ID! #Folder ID
+    id: ID! #Unique to user. Same as fid if on admin view
+    pages: [Page!]
+    name: String!
+}
+
+type Page {
+    id: ID!
+    components: [FolderComponent!]
+}
+
+interface FolderComponent {
+    id: ID!
+    title: String!
+}
+
+input SaveAssignmentInput {
+    listComponents: [ListComponentInput!]!
+    outlineComponents: [OutlineComponentInput!]!
+    pictureComponents: [PictureComponentInput!]!
+    tableComponents: [TableComponentInput!]!
+}

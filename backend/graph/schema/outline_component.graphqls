@@ -1,0 +1,23 @@
+type OutlineComponent implements FolderComponent {
+    id: ID!
+    title: String!
+    children: [OutlineChild!]
+}
+
+type OutlineChild {
+    id: ID!
+    title: String!
+    requiresResponse: Boolean!
+    response: String
+    children: [OutlineChild!]
+}
+
+input OutlineComponentInput {
+    id: ID!
+    responses: [OutlineResponse!]!
+}
+
+input OutlineResponse {
+    id: ID!
+    response: String!
+}

@@ -1,0 +1,21 @@
+type ListComponent implements FolderComponent {
+  id: ID!
+  title: String!
+  listItems: [ListItem!]
+}
+
+type ListItem {
+    id: ID!
+    title: String!
+    response: String
+}
+
+input ListComponentInput {
+  id: ID!
+  listItems: [ListItemInput!]
+}
+
+input ListItemInput {
+  id: ID!
+  response: String!
+}

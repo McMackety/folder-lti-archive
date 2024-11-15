@@ -1,0 +1,7 @@
+overwrite: true
+schema: "https://api.oconnorfolder.nathankutzan.info/query"
+generates:
+  types/generated.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-react-apollo"

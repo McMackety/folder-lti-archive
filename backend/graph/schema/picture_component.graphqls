@@ -1,0 +1,24 @@
+type PictureComponent implements FolderComponent {
+    id: ID!
+    title: String!
+    pictures: [PictureItem!]
+}
+
+type PictureItem {
+    id: ID!
+    pictureStaticUrl: String
+    needsResponseText: Boolean!
+    pictureResponseUrl: String
+    textResponse: String
+}
+
+input PictureComponentInput {
+    id: ID!
+    pictures: [PictureItemInput!]!
+}
+
+input PictureItemInput {
+    id: ID!
+    pictureResponseUrl: String
+    textResponse: String
+}
